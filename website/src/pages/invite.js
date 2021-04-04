@@ -15,6 +15,21 @@ export default class InviteLink extends React.Component {
   };
 
   render() {
-    return <Layout title="Invite" />
+    return (
+      <Layout title="Invite">
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '50vh',
+            fontSize: '20px',
+          }}>
+          <p>
+            Mengalihkan...
+          </p>
+        </div>
+      </Layout>
+    )
   }
 }
