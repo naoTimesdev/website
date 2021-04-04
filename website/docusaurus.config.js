@@ -48,7 +48,7 @@ module.exports={
       "items": [
         {
           "to": "docs/",
-          "label": "Docs",
+          "label": "Dokumentasi",
           "position": "left"
         },
         {
