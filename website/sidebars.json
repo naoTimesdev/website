@@ -1,0 +1,29 @@
+{
+  "docs": {
+    "Mulai dari sini": ["home", "ntperintah"],
+    "Perintah Bot": [
+      "perintah/ntpshowtimes",
+      "perintah/ntpanivn",
+      "perintah/ntpfun",
+      "perintah/ntpfsrss",
+      "perintah/ntpnh",
+      "perintah/ntppeninjau",
+      "perintah/ntpperpusnyaa",
+      "perintah/ntpvote",
+      "perintah/ntpsaus",
+      "perintah/ntpvtuber",
+      "perintah/ntpibooru"
+    ],
+    "Integrasi": [
+      "integrasi/ntui",
+      "integrasi/ntwebsite"
+    ],
+    "Self-Hosting": [
+      "selfhost/setup"
+    ],
+    "Penutup": [
+      "credits/credits",
+      "credits/changelog"
+    ]
+  }
+}
