@@ -20,9 +20,9 @@ module.exports={
       "@docusaurus/preset-classic",
       {
         "docs": {
+          "path": "docs",
           "showLastUpdateAuthor": true,
           "showLastUpdateTime": true,
-          "path": "..\\docs",
           "sidebarPath": "..\\website\\sidebars.json"
         },
         "blog": {
