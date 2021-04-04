@@ -23,13 +23,13 @@ module.exports={
           "path": "docs",
           "showLastUpdateAuthor": true,
           "showLastUpdateTime": true,
-          "sidebarPath": "..\\website\\sidebars.json"
+          "sidebarPath": "sidebars.json"
         },
         "blog": {
           "path": "blog"
         },
         "theme": {
-          "customCss": "..\\src\\css\\customTheme.css"
+          "customCss": [require.resolve("./src/css/customTheme.css")],
         }
       }
     ]
@@ -56,6 +56,11 @@ module.exports={
           "label": "Blog",
           "position": "left",
         },
+        {
+          href: "https://trakteer.id/noaione",
+          label: "Donasi",
+          position: "right"
+        }
       ]
     },
     "image": "img/icon/nt256.png",
