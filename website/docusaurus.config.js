@@ -43,7 +43,7 @@ module.exports={
     "navbar": {
       "title": "naoTimes",
       "logo": {
-        "src": "img/icon/nt120.png"
+        "src": "assets/img/nt120.png"
       },
       "items": [
         {
@@ -63,7 +63,7 @@ module.exports={
         }
       ]
     },
-    "image": "img/icon/nt256.png",
+    "image": "assets/img/nt256.png",
     "footer": {
       "links": [
         {
@@ -97,7 +97,7 @@ module.exports={
           ]
         }
       ],
-      "copyright": "Copyright © 2021 naoTimes Dev"
+      "copyright": "Copyright © 2021 naoTimes Dev | Website Built with Docusaurus"
     }
   }
 }
