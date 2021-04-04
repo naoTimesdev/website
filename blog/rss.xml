@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>naoTimes Blog</title>
+        <link>https://naoTimesdev.github.io/blog</link>
+        <description>naoTimes Blog</description>
+        <lastBuildDate>Sat, 03 Apr 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Halo Dunia]]></title>
+            <link>https://naoTimesdev.github.io/blog/2021/04/03/halo-dunia</link>
+            <guid>Halo Dunia</guid>
+            <pubDate>Sat, 03 Apr 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Rumah baru untuk dokumentasi naoTimes]]></description>
+        </item>
+    </channel>
+</rss>

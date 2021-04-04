@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://naoTimesdev.github.io/blog</id>
+    <title>naoTimes Blog</title>
+    <updated>2021-04-03T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://naoTimesdev.github.io/blog"/>
+    <subtitle>naoTimes Blog</subtitle>
+    <icon>https://naoTimesdev.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Halo Dunia]]></title>
+        <id>Halo Dunia</id>
+        <link href="https://naoTimesdev.github.io/blog/2021/04/03/halo-dunia"/>
+        <updated>2021-04-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Rumah baru untuk dokumentasi naoTimes]]></summary>
+    </entry>
+</feed>
