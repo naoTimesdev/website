@@ -57,6 +57,11 @@ module.exports={
           "position": "left",
         },
         {
+          href: "/invite",
+          label: "Invite",
+          position: "right"
+        },
+        {
           href: "https://trakteer.id/noaione",
           label: "Donasi",
           position: "right"
