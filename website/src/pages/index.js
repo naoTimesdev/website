@@ -7,7 +7,7 @@ export default () => {
   return (
     <Layout title="naoTimes">
       <img
-        src={"/img/icon/nt192.png"}
+        src={"/assets/img/nt192.png"}
         style={{
           display: "block",
           justifyContent: "center",
