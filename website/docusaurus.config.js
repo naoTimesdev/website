@@ -1,7 +1,7 @@
 module.exports={
   "title": "naoTimes",
   "tagline": "Bot berbahasa Indonesia untuk membantu tracking garapan fansubber",
-  "url": "https://naoTimesdev.github.io",
+  "url": "https://naoti.me",
   "baseUrl": "/",
   "organizationName": "naoTimesdev",
   "projectName": "website",
