@@ -4,9 +4,16 @@
         <title>naoTimes Blog</title>
         <link>https://naoti.me/blog</link>
         <description>naoTimes Blog</description>
-        <lastBuildDate>Sat, 03 Apr 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 04 Apr 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[naoTimes WebUI]]></title>
+            <link>https://naoti.me/blog/2021/04/04/naotimes-ui</link>
+            <guid>naoTimes WebUI</guid>
+            <pubDate>Sun, 04 Apr 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Sebuah website untuk mengatur Garapan di Bot naoTimes melalu browser anda]]></description>
+        </item>
         <item>
             <title><![CDATA[Halo Dunia]]></title>
             <link>https://naoti.me/blog/2021/04/03/halo-dunia</link>
