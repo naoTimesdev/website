@@ -20,11 +20,11 @@ Cukup melakukan `!showui` di Server Discord anda, atau DM/PM Bot dengan server I
 - 👯‍♂️ Merubah staff (masih harus tetap mengambil User Discord ID)
 - 🌙 Mode Gelap (dan Mode Cerah 🌞)
 - ✨ Embed untuk Website! (Akses di Pengaturan)
+- 💬 Merubah kanal announcement progres proyek
 - 🤖 Live Update ke Bot
 
 ### Akan Datang
 - 🎩 Menambah/Menghapus Admin Showtimes
-- 💬 Merubah kanal announcement progres proyek
 - 💥 Menghapus server dari Showtimes
 - 🔡 Lebih banyak Bahasa
 - 🤝 Kolaborasi via Web
