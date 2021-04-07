@@ -40,6 +40,12 @@ module.exports={
     colorMode: {
       defaultMode: "dark"
     },
+    "algolia": {
+      "apiKey": "baef4cca0522683cd2d596fae5f15524",
+      "indexName": "naotimes-docs",
+      "appId": "38N8AZP6IV",
+      "placeholder": "Cari"
+    },
     "navbar": {
       "title": "naoTimes",
       "logo": {
@@ -63,9 +69,14 @@ module.exports={
         },
         {
           href: "https://trakteer.id/noaione",
-          label: "Donasi",
-          position: "right"
-        }
+          position: "right",
+          label: "Donasi"
+        },
+        {
+          href: "https://github.com/naoTimesdev/naoTimes",
+          position: "right",
+          className: "header-github-link",
+        },
       ]
     },
     "image": "assets/img/nt256.png",
