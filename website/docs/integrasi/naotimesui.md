@@ -21,10 +21,10 @@ Cukup melakukan `!showui` di Server Discord anda, atau DM/PM Bot dengan server I
 - 🌙 Mode Gelap (dan Mode Cerah 🌞)
 - ✨ Embed untuk Website! (Akses di Pengaturan)
 - 💬 Merubah kanal announcement progres proyek
+- 🎩 Menambah/Menghapus Admin Showtimes
 - 🤖 Live Update ke Bot
 
 ### Akan Datang
-- 🎩 Menambah/Menghapus Admin Showtimes
 - 💥 Menghapus server dari Showtimes
 - 🔡 Lebih banyak Bahasa
 - 🤝 Kolaborasi via Web
@@ -59,3 +59,7 @@ Cukup melakukan `!showui` di Server Discord anda, atau DM/PM Bot dengan server I
 ### Embed
 
 ![Embedding](/img/ntui/embedThingy.gif)
+
+### Ubah/Atur Admin
+
+![Admin](/img/ntui/adminChange.gif)
