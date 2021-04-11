@@ -13,6 +13,7 @@ Akses di sini: [https://panel.naoti.me/](https://panel.naoti.me/)
 Cukup melakukan `!showui` di Server Discord anda, atau DM/PM Bot dengan server ID-nya, anda dapat mengakses WebUI naoTimes!
 
 ## Fitur
+**Versi 0.1.0**
 - 📺 Menambah Proyek Baru
 - 👀 Melihat Proyek yang masih dikerjakan maupun yang sudah
 - 📈 Statistik
@@ -21,14 +22,16 @@ Cukup melakukan `!showui` di Server Discord anda, atau DM/PM Bot dengan server I
 - 🌙 Mode Gelap (dan Mode Cerah 🌞)
 - ✨ Embed untuk Website! (Akses di Pengaturan)
 - 💬 Merubah kanal announcement progres proyek
-- 🎩 Menambah/Menghapus Admin Showtimes
 - 🤖 Live Update ke Bot
 
-### Akan Datang
+**Versi 0.2.0**
+- 🎩 Menambah/Menghapus Admin Showtimes
+- 🅱 Menambah/Hapus alias dari Web
 - 💥 Menghapus server dari Showtimes
+
+### Akan Datang
 - 🔡 Lebih banyak Bahasa
 - 🤝 Kolaborasi via Web
-- 🅱 Menambah/Hapus alias dari Web
 
 ## .gif
 
@@ -63,3 +66,7 @@ Cukup melakukan `!showui` di Server Discord anda, atau DM/PM Bot dengan server I
 ### Ubah/Atur Admin
 
 ![Admin](/img/ntui/adminChange.gif)
+
+### Ubah/Atur Alias
+
+![Aliases](https://media.discordapp.net/attachments/427065668890787846/829615996628107264/iKhgeWecv4.gif)
