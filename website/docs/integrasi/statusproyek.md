@@ -9,6 +9,10 @@ Menghubungkan progres garapan dari database bot ke website.
 ## Versi Embed
 Dengan menggunakan link berikut [https://panel.naoti.me/embed](https://panel.naoti.me/embed) anda bisa menambahkan Embed via iframe ke Website anda tanpa ribet-ribet design.
 
+:::info
+Jika situ ada masalah dengan scroll/iframe butuh scrolling, mohon klik ini: [Atur Ukuran iFrame secara otomatis](#mengatur-ukuran-iframe)
+:::
+
 Cukup tambahkan `?id=SERVER_ID` dengan `SERVER_ID` diubah ke server ID Discord tersebut.<br />
 Contoh: https://panel.naoti.me/embed?id=472705451117641729
 
@@ -33,6 +37,83 @@ Contoh:
 - https://panel.naoti.me/embed?id=472705451117641729&accent=red (Aksen merah)
 - https://panel.naoti.me/embed?id=472705451117641729&accent=red&dark=true (Aksen merah + Dark mode)
 - https://panel.naoti.me/embed?id=472705451117641729&accent=red&lang=en (Aksen merah + Dark mode + Bahasa Inggris)
+
+### Mengatur Ukuran iFrame
+Misalkan situ menyelipkan iframe dengan cara ini:
+```html
+<div id="naotimes">
+    <iframe id="naotimes-project" src="https://panel.naoti.me/embed?id=472705451117641729">
+</div>
+```
+
+Dan situ mendapatkan kurang lebih seperti ini:
+![Scrollwheel](https://p.ihateani.me/ofljljgm.png)
+
+Situ gak mau ada scrollwhell, jadi mari kita tambah script khusus untuk otomatis resize.
+
+Embed akan mengirimkan sebuah pesan untuk `resize` jika Client support, jadi untuk menerima pesan tersebut dan memprosesnya cukup menulis script kurang lebih gini
+```html
+<script>
+    /**
+    * Resize iframe naoTimes ketika sudah load.
+    */
+    window.addEventListener("message", function (event) {
+        // Periksa apakah pesan dari embed naotimes apa tidak
+        if (!event.origin.startsWith("https://panel.naoti.me/embed")) {
+            return;
+        }
+
+        // Parse data yang dikirim oleh Embed
+        const data = JSON.parse(event.data);
+        // Ambil element iframe via `id`
+        const iframe = document.getElementById("naotimes-project");
+        if (data.action === "resize") {
+            iframe.height = data.height;
+            iframe.scrolling = "no";
+            iframe.style.opacity = "1";
+            // Hilangkan scrollbar
+            iframe.style.overflowY = "hidden";
+        }
+    }, false);
+</script>
+```
+
+Dengan skrip itu, Embed akan otomatis ke-resize.
+di Line:
+```js
+const iframe = document.getElementById("naotimes-project");
+```
+teks `naotimes-project` diubah sesuai dengan `id` yang situ kasih ke iframenya, saran `naotimes-project`
+
+Maka full codenya untuk embed:
+```html
+<div id="naotimes">
+    <script>
+        /**
+        * Resize iframe naoTimes ketika sudah load.
+        */
+        window.addEventListener("message", function (event) {
+            // Periksa apakah pesan dari embed naotimes apa tidak
+            if (!event.origin.startsWith("https://panel.naoti.me")) {
+                return;
+            }
+
+            // Parse data yang dikirim oleh Embed
+            const data = JSON.parse(event.data);
+            // Ambil element iframe via `id`
+            const iframe = document.getElementById("naotimes-project");
+            if (data.action === "resize") {
+                iframe.height = data.height;
+                iframe.scrolling = "no";
+                iframe.style.opacity = "1";
+                // Hilangkan scrollbar
+                iframe.style.overflowY = "hidden";
+            }
+        }, false);
+    </script>
+    <iframe id="naotimes-project" src="https://panel.naoti.me/embed?id=472705451117641729">
+</div>
+```
 
 ## Versi Script
 
