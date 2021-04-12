@@ -47,6 +47,7 @@ Misalkan situ menyelipkan iframe dengan cara ini:
 ```
 
 Dan situ mendapatkan kurang lebih seperti ini:
+
 ![Scrollwheel](https://p.ihateani.me/ofljljgm.png)
 
 Situ gak mau ada scrollwhell, jadi mari kita tambah script khusus untuk otomatis resize.
@@ -59,7 +60,7 @@ Embed akan mengirimkan sebuah pesan untuk `resize` jika Client support, jadi unt
     */
     window.addEventListener("message", function (event) {
         // Periksa apakah pesan dari embed naotimes apa tidak
-        if (!event.origin.startsWith("https://panel.naoti.me/embed")) {
+        if (!event.origin.startsWith("https://panel.naoti.me")) {
             return;
         }
 
