@@ -12,7 +12,17 @@ function jsonify(response) {
 
 function naoTimesProcess(disID) {
 	console.log("Fetching naoTimes data");
-	fetch(`https://utang.naoti.me/${disID}?pretty=true`)
+	if (typeof disID !== "string") {
+		var loading_elem = document.getElementById("naotimes-loading");
+		console.log("Request failed", error);
+		var h2_node = document.createElement("h2");
+		h2_node.classList.add("naotimes-animetitle")
+		var h2_textNode = document.createTextNode("Tidak dapat megambil data utang.");
+		h2_node.appendChild(h2_textNode);
+		loading_elem.parentNode.removeChild(loading_elem);
+		return;
+	}
+	fetch("https://panel.naoti.me/api/showtimes/status/" + disID)
 		.then(rStatus)
 		.then(jsonify)
 		.then(function (nT_data) {
