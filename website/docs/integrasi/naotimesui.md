@@ -12,6 +12,8 @@ Akses di sini: [https://panel.naoti.me/](https://panel.naoti.me/)
 
 Cukup melakukan `!showui` di Server Discord anda, atau DM/PM Bot dengan server ID-nya, anda dapat mengakses WebUI naoTimes!
 
+Progress untuk Integrasi ini dapat dilihat di **[Notion](https://www.notion.so/15e0f92063284be5a778feee1ec30bea?v=807e65a376b04062aab230ee5f762095)**
+
 ## Fitur
 **Versi 0.1.0**
 - 📺 Menambah Proyek Baru

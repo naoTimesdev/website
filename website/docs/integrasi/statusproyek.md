@@ -80,10 +80,12 @@ Embed akan mengirimkan sebuah pesan untuk `resize` jika Client support, jadi unt
 ```
 
 Dengan skrip itu, Embed akan otomatis ke-resize.
+
 di Line:
 ```js
 const iframe = document.getElementById("naotimes-project");
 ```
+
 teks `naotimes-project` diubah sesuai dengan `id` yang situ kasih ke iframenya, saran `naotimes-project`
 
 Maka full codenya untuk embed:
