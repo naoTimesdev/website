@@ -4,13 +4,6 @@ title: FansubRSS
 slug: /perintah/fansubrss
 ---
 
-:::caution 🚧 WIP 🚧
-Halaman ini dalam proses pengerjaan
-
-:::
-
-[![Ogeyyy](https://i.ytimg.com/vi/DETMkvZ0G_Q/maxresdefault.jpg)](https://github.com/naoTimesdev/website/blob/master/website/docs/perintah/fansubrss.md)
-
 FansubRSS merupakan sistem RSS yang tersedia di Bot naoTimes, walaupun namanya **Fansub**RSS, fitur ini dapat digunakan oleh siapa aja dengan batasan.
 
 Fitur ini tersedia dalam 2 macam, Fitur normal, atau Premium.

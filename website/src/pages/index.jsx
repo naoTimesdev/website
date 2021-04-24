@@ -49,9 +49,9 @@ export default () => {
           <img src={"https://img.shields.io/uptimerobot/status/m786469671-606ba8f8deaf00978879eb7d?label=Bot&style=for-the-badge"} alt={"Uptime Status"} />
         </div>
         <div style={{display: "flex", flexDirection: "row", gap: "0.5rem"}}>
-          <LinkButton href="/invite">Invite</LinkButton>
-          <LinkButton href="/docs">Dokumentasi</LinkButton>
-          <LinkButton href="/blog">Blog</LinkButton>
+          <LinkButton href="/invite/">Invite</LinkButton>
+          <LinkButton href="/docs/">Dokumentasi</LinkButton>
+          <LinkButton href="/blog/">Blog</LinkButton>
         </div>
       </div>
       <br />
