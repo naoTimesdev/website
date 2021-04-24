@@ -35,6 +35,13 @@ module.exports={
     ]
   ],
   "plugins": [
+    [
+      "docusaurus-plugin-plausible",
+      {
+        "domain": "naoti.me",
+        "customDomain": "tr.n4o.xyz"
+      }
+    ]
   ],
   "themeConfig": {
     colorMode: {
