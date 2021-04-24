@@ -6,7 +6,13 @@ module.exports={
   "organizationName": "naoTimesdev",
   "projectName": "website",
   "scripts": [
-    "https://buttons.github.io/buttons.js"
+    "https://buttons.github.io/buttons.js",
+    {
+      src: "https://tr.n4o.xyz/js/plausible.js",
+      async: true,
+      defer: true,
+      "data-domain": "naoti.me"
+    }
   ],
   "favicon": "img/favicon.ico",
   "customFields": {
@@ -31,15 +37,6 @@ module.exports={
         "theme": {
           "customCss": [require.resolve("./src/css/customTheme.css")],
         }
-      }
-    ]
-  ],
-  "plugins": [
-    [
-      "docusaurus-plugin-plausible",
-      {
-        "domain": "naoti.me",
-        "customDomain": "tr.n4o.xyz"
       }
     ]
   ],
