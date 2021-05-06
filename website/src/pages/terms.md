@@ -1,5 +1,5 @@
 ---
-title: Persyaratan Layanan
+title: Persyaratan Penggunaan Layanan
 description: Halaman ini akan menjelaskan tentang persyaratan layanan untuk menggunakan Bot ini.
 ---
 
