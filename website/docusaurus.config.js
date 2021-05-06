@@ -100,6 +100,23 @@ module.exports={
           ]
         },
         {
+          title: "Legal",
+          items: [
+            {
+              label: "Syarat dan Ketentuan",
+              href: "/terms"
+            },    
+            {
+              label: "Kebijakan Privasi",
+              href: "/privasi"
+            },    
+            {
+              label: "Hubungi kami",
+              href: "/kontak"
+            }
+          ]
+        },
+        {
           title: "Lain-lain",
           items: [
             {
