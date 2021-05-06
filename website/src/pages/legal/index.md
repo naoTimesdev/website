@@ -8,6 +8,6 @@ hide_table_of_contents: true
 
 Berikut adalah koleksi link untuk mengakses beberapa informasi legal untuk naoTimes
 
-- [Syarat dan Ketentuan](http://localhost:3000/terms)
-- [Kebijakan Privasi](http://localhost:3000/privasi)
-- [Kontak](http://localhost:3000/kontak)
+- [Syarat dan Ketentuan](/terms)
+- [Kebijakan Privasi](/privasi)
+- [Kontak](/kontak)
