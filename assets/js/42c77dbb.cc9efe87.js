@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{87:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"naoTimes WebUI","permalink":"/blog/2021/04/04/naotimes-ui"},{"title":"Halo Dunia","permalink":"/blog/2021/04/03/halo-dunia"}]}')}}]);
