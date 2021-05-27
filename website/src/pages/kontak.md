@@ -5,6 +5,8 @@ description: Hubungi kami
 
 # Kontak
 
+🈂️ [English](/contact)
+
 Anda dapat menghubungi pihak naoTimes melalui jalur Email yaitu noaione@n4o.xyz
 
 Atau anda dapat masuk ke Server Discord kami di sini https://discord.gg/7KyYecn
@@ -22,3 +24,4 @@ Atau anda dapat melaporkannya di laman GitHub Issues kami:
 - naoTimes (Bot): [naoTimesdev/naoTimes](https://github.com/naoTimesdev/naoTimes/issues/new/choose)
 - naoTimesUI (WebUI): [noaione/naoTimesUI](https://github.com/noaione/naoTimesUI/issues/new/choose)
 
+Untuk masalah sekuriti yang rentan, mohon kontak kami via Email terlebih dahulu di sini noaione@n4o.xyz
