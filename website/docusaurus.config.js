@@ -72,7 +72,7 @@ module.exports={
           position: "right"
         },
         {
-          href: "https://trakteer.id/noaione",
+          href: "/donasi",
           position: "right",
           label: "Donasi"
         },
@@ -96,6 +96,10 @@ module.exports={
             {
               label: "Discord",
               href: "https://discord.gg/7KyYecn"
+            },
+            {
+              label: "Donasi",
+              href: "/donasi"
             }
           ]
         },
