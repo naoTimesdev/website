@@ -4,9 +4,16 @@
         <title>naoTimes Blog</title>
         <link>https://naoti.me/blog</link>
         <description>naoTimes Blog</description>
-        <lastBuildDate>Sun, 04 Apr 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 26 Jun 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Verified ✅]]></title>
+            <link>https://naoti.me/blog/2021/06/26/verified</link>
+            <guid>Verified ✅</guid>
+            <pubDate>Sat, 26 Jun 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Setelah sekian lama sejak Bot ini dibuat, akhirnya Bot ini telah diverifikasi oleh Discord.]]></description>
+        </item>
         <item>
             <title><![CDATA[naoTimes WebUI]]></title>
             <link>https://naoti.me/blog/2021/04/04/naotimes-ui</link>
