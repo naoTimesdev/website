@@ -22,6 +22,9 @@ Ada support untuk dark mode juga, cukup tambahkan `&dark=true`
 Untuk Bahasa ada support untuk:
 - Inggris (Kode: `en`)
 - Indonesia (Kode: `id`) [default]
+- Jawa (Kode: `jv`)
+- Sunda (Kode: `su`)
+- Jepang (Kode: `jp` atau `ja`)
 
 Untuk aksen warna tersedia:
 - `red`
@@ -37,6 +40,52 @@ Contoh:
 - https://panel.naoti.me/embed?id=472705451117641729&accent=red (Aksen merah)
 - https://panel.naoti.me/embed?id=472705451117641729&accent=red&dark=true (Aksen merah + Dark mode)
 - https://panel.naoti.me/embed?id=472705451117641729&accent=red&lang=en (Aksen merah + Dark mode + Bahasa Inggris)
+
+### Mengatur ulang tanpa mengubah URL
+Anda juga dapat mengatur dark mode, aksen, dan bahasa tanpa mengubah URL dengan cara mengirimkan pesan ke iframe Embed naoTimes.<br />
+Ini akan berguna jika situ punya website yang dapat mengubah dari light mode ke dark mode dan ingin mengubah otomatis dark mode status proyeknya.<br />
+
+> Format pesan yang harus anda kirim seperti ini:
+```json
+{"event": "EVENT_NAME", "target": "TARGET_DATA"}
+```
+
+`EVENT_NAME` ada:
+1. `setDark` untuk mengatur Dark mode
+2. `setAccent` untuk mengatur aksen
+3. `setLanguage` untuk mengatur bahasa.
+
+Untuk `TARGET_DATA` sendiri ada:
+1. `setDark` target datanya adalah `true` atau `false`
+2. `setAccent` targetnya adalah nama aksen warna yang ada diatas.
+3. `setLanguage` targetnya adalah kode bahasa yang ada diatas.
+
+Misalkan kita punnya iframe naoTimes dengan ID: `naotimes-status`
+
+Maka kita bisa mengirimkan pesan ke iframe itu dengan cara:
+```js
+var dataToSend = {event: "EVENT_NAME", target: "TARGET_DATA"};
+document.getElementById("naotimes-status").contentWindow.postMessage(JSON.stringify(dataToSend), "*");
+```
+
+Cukup ubah `EVENT_NAME` dan `TARGET_DATA` sesuai yang diberikan diatas, contoh aslinya seperti ini:
+> Atur ke dark mode
+```js
+var dataToSend = {event: "setDark", target: true};
+document.getElementById("naotimes-status").contentWindow.postMessage(JSON.stringify(dataToSend), "*");
+```
+
+> Atur aksen ke warna merah
+```js
+var dataToSend = {event: "setAccent", target: "red"};
+document.getElementById("naotimes-status").contentWindow.postMessage(JSON.stringify(dataToSend), "*");
+```
+
+> Atur bahasa ke Bahasa Jepang
+```js
+var dataToSend = {event: "setLanguage", target: "jp"};
+document.getElementById("naotimes-status").contentWindow.postMessage(JSON.stringify(dataToSend), "*");
+```
 
 ### Mengatur Ukuran iFrame
 Misalkan situ menyelipkan iframe dengan cara ini:
