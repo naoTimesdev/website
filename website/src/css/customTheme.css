@@ -39,3 +39,30 @@ span.DocSearch-Button-Placeholder:after {
 span.DocSearch-Button-Placeholder {
   visibility: hidden;
 }
+
+
+.flex-invite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.flex-invite-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .flex-invite {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2rem;
+  }
+
+  .flex-invite-content {
+    margin-bottom: 0;
+  }
+}
