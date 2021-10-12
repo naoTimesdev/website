@@ -44,7 +44,7 @@ const Permissions = {
   attach_files: new Perms("attach_files", "Attach Files", 0x8000),
   read_messages_history: new Perms("read_messages_history", "Read Messages History", 0x10000),
   mention_everyone: new Perms("mention_everyone", "Mention Everyone", 0x20000),
-  external_emojis: new Perms("external_emojis", "Use External Emojis", 0x40000),
+  external_emojis: new Perms("external_emojis", "Use External Emojis", 0x40000, false, true),
   external_stickers: new Perms("external_stickers", "Use External Stickers", 0x2000000000),
   use_slash_commands: new Perms("use_slash_commands", "Use Slash Commands", 0x80000000, false, true),
   // Voice
@@ -81,6 +81,7 @@ const FEATURES_SETS = [
       Permissions.embed_links,
       Permissions.read_messages_history,
       Permissions.manage_messages,
+      Permissions.external_emojis,
     ],
   },
   {
