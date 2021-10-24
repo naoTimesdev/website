@@ -1,7 +1,6 @@
 ---
-id: ntpnh
 title: nH
-slug: /perintah/nh
+slug: /perintah/bahaya/nh
 ---
 
 :::danger Perhatian

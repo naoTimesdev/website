@@ -95,3 +95,9 @@ Di laman ini, saya akan menulis semua perubahan pada Bot naoTimes
 - Command [Image Board](/docs/perintah/imagebooru)
 - KBBI akan memberikan saran entri kalo tidak bisa menemukan kata yang dicari
 - Otomatis menambah role yang dibuat atau yang dibuat oleh bot ke list member pas tambah utang.
+
+### Versi 3.0.0
+- Rewrite keseluruhan Bot, membuatnya lebih dinamik
+- Menggunakan obyek/model untuk berbagai macam fitur (terutama Showtimes).
+- ODM untuk MongoDB
+- Code splitting

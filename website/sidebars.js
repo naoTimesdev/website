@@ -51,14 +51,39 @@ module.exports = {
                     type: "category",
                     label: "Moderasi",
                     items: [
+                        "perintah/moderasi/automod",
+                        "perintah/moderasi/kanal",
+                        "perintah/moderasi/pesan",
                         "perintah/moderasi/user",
+                        "perintah/moderasi/utas",
+                        "perintah/moderasi/modlogs",
                     ]
                 },
-                "perintah/ntpshowtimes",
+                {
+                    type: "category",
+                    label: "Peninjau Website",
+                    items: [
+                        "perintah/peninjau/anibin",
+                        "perintah/peninjau/cuaca",
+                        "perintah/peninjau/kurs",
+                        "perintah/peninjau/saus",
+                    ]
+                },
+                {
+                    type: "category",
+                    label: "Showtimes",
+                    items: [
+                        "perintah/showtimes/intro",
+                        "perintah/showtimes/user",
+                        "perintah/showtimes/staff",
+                        "perintah/showtimes/admin",
+                        "perintah/showtimes/alias",
+                        "perintah/showtimes/kolaborasi",
+                    ]
+                },
+                // "perintah/ntpshowtimes",
                 "perintah/ntpfsrss",
-                "perintah/ntppeninjau",
-                "perintah/ntpvote",
-                "perintah/ntpsaus",
+                "perintah/vote",
             ]
         },
         {

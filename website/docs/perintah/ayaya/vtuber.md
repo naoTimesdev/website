@@ -1,14 +1,13 @@
 ---
-id: ntpvtuber
 title: VTuber
-slug: /perintah/vtuber
+slug: /perintah/anivn/vtuber
 ---
 
-Dapatkan informasi Live, Jadwal, dan Channel VTuber yang terdaftar di [ihateani.me API](https://api.ihateani.me/v2)<br />
-Command ini menggunakan sistem `argparse` untuk command dan sebagainya.
+Dihalaman ini, kami akan menjelaskan sedikit tentang kumpulan perintah VTuber yang diprakasai dengan [api.ihateani.me](https://api.ihateani.me/).
+
+Setiap perintah yang kami tulis di sini support pagination dengan Reaksi dan juga menggunakan parser khusus. (`argparse`)
 
 ## Perintah
-
 | Nama Command | Penjelasan |  Contoh  | Alias |
 |:------------:|:----------:|:--------:|:-----:|
 | !vtuber live -h | Melihat bantuan perintah untuk command `vtuber live` | - | !vtuber lives |
