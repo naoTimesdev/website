@@ -4,9 +4,16 @@
         <title>naoTimes Blog</title>
         <link>https://naoti.me/blog</link>
         <description>naoTimes Blog</description>
-        <lastBuildDate>Sat, 26 Jun 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 30 Sep 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Versi 3.0.0]]></title>
+            <link>https://naoti.me/blog/2021/09/30/versi-300</link>
+            <guid>Versi 3.0.0</guid>
+            <pubDate>Thu, 30 Sep 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Improvisasi terhadap codebase terutama fitur Showtimes]]></description>
+        </item>
         <item>
             <title><![CDATA[Verified ✅]]></title>
             <link>https://naoti.me/blog/2021/06/26/verified</link>
