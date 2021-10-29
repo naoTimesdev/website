@@ -1,5 +1,4 @@
 ---
-id: ntpibooru
 title: ImageBooru
 slug: /perintah/imagebooru
 ---

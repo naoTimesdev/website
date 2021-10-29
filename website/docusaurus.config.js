@@ -16,7 +16,7 @@ module.exports={
   "favicon": "img/favicon.ico",
   "customFields": {
     "users": [],
-    "version": "2.0.4"
+    "version": "3.0.0"
   },
   "onBrokenLinks": "log",
   "onBrokenMarkdownLinks": "log",
@@ -28,7 +28,7 @@ module.exports={
           "path": "docs",
           "showLastUpdateAuthor": true,
           "showLastUpdateTime": true,
-          "sidebarPath": "sidebars.json"
+          "sidebarPath": require.resolve("./sidebars.js"),
         },
         "blog": {
           "path": "blog"
