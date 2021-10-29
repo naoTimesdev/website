@@ -81,6 +81,14 @@ module.exports = {
                         "perintah/showtimes/kolaborasi",
                     ]
                 },
+                {
+                    type: "category",
+                    label: "Pemutar Musik",
+                    items: [
+                        "perintah/musik/intro",
+                        "perintah/musik/perintah",
+                    ]
+                },
                 // "perintah/ntpshowtimes",
                 "perintah/ntpfsrss",
                 "perintah/vote",
@@ -105,7 +113,9 @@ module.exports = {
             type: "category",
             label: "Setup",
             items: [
-                "selfhost/setup"
+                "selfhost/intro",
+                "selfhost/persiapan",
+                "selfhost/setup",
             ]
         },
         "credits/credits",

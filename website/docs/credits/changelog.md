@@ -97,6 +97,7 @@ Di laman ini, saya akan menulis semua perubahan pada Bot naoTimes
 - Otomatis menambah role yang dibuat atau yang dibuat oleh bot ke list member pas tambah utang.
 
 ### Versi 3.0.0
+- [Pemutar Musik](/docs/perintah/musik)
 - Rewrite keseluruhan Bot, membuatnya lebih dinamik
 - Menggunakan obyek/model untuk berbagai macam fitur (terutama Showtimes).
 - ODM untuk MongoDB
