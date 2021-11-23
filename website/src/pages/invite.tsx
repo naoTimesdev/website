@@ -1,10 +1,16 @@
+// @ts-ignore
 import Layout from "@theme/Layout";
 import React from "react";
-import Head from '@docusaurus/Head';
 
 
 class Perms {
-  constructor(id, name, value, oauth = false, strict = false) {
+  id: string;
+  name: string;
+  value: number;
+  oauth: boolean;
+  strict: boolean;
+
+  constructor(id: string, name: string, value: number, oauth = false, strict = false) {
     this.id = id
     this.name = name;
     this.value = value;
@@ -13,8 +19,9 @@ class Perms {
   }
 }
 
+type PermissionTypes = {[key: string]: Perms};
 
-const Permissions = {
+const Permissions: PermissionTypes = {
   // General
   create_invites: new Perms("create_invites", "Create Invites", 0x1),
   kick_members: new Perms("kick_members", "Kick Members", 0x2, true),
@@ -58,7 +65,14 @@ const Permissions = {
   priority_speaker: new Perms("priority_speaker", "Priority Speaker", 0x100),
 }
 
-const FEATURES_SETS = [
+interface Feature {
+  id: string;
+  title: string;
+  permissions: Perms[];
+  strict?: boolean;
+}
+
+const FEATURES_SETS: Feature[] = [
   {
     id: "base",
     title: "Base (Semua hal yang diperlukan agar naoTimes dapat jalan)",
@@ -267,11 +281,20 @@ const FEATURES_SETS = [
   }
 ]
 
-function findFeatureById(id) {
-  return FEATURES_SETS.find(f => f.id === id)
+type PermissionMember = {
+  [Prop in keyof typeof Permissions]: boolean
 }
 
-export default class InvitePage extends React.Component {
+interface InviteState extends PermissionMember {
+  app_commands: boolean;
+}
+
+interface KeyToggleProps {
+  data: Perms | Feature;
+  isFeature?: boolean;
+}
+
+export default class InvitePage extends React.Component<{}, InviteState> {
   constructor(props) {
     super(props);
 
@@ -301,6 +324,7 @@ export default class InvitePage extends React.Component {
     this.togglePerms = this.togglePerms.bind(this);
     this.generateLink = this.generateLink.bind(this);
     this.toggleFeatures = this.toggleFeatures.bind(this);
+    this.KeyToggle = this.KeyToggle.bind(this);
   }
 
   generateLink() {
@@ -324,41 +348,71 @@ export default class InvitePage extends React.Component {
     if (enableAppCommands) {
       scopes += "%20applications.commands";
     }
+    if (this.state.administrator) {
+      perms = Permissions.administrator.value;
+    }
     return `https://discord.com/api/oauth2/authorize?client_id=${clientId}&permissions=${perms}&scope=${scopes}`;
   }
 
-  togglePerms(name) {
+  togglePerms(name: string) {
     const prevState = this.state[name];
     const toggleAllThis = {};
     this.setState({[name]: !prevState}, () => {
-      if (name == "administrator") {
-        for (const [key, value] of Object.entries(this.state)) {
-          if (key.startsWith("ntfeatures-")) {
-            toggleAllThis[key] = !prevState;
+      for (const feature of FEATURES_SETS) {
+        let toggleOff = false;
+        for (const permission of feature.permissions) {
+          if (!this.state[permission.id]) {
+            toggleOff = true;
           }
         }
-      } else {
-        for (const feature of FEATURES_SETS) {
-          let toggleOff = false;
-          for (const permission of feature.permissions) {
-            if (!this.state[permission.id]) {
-              toggleOff = true;
+        if (toggleOff) {
+          toggleAllThis[`ntfeatures-${feature.id}`] = false;
+        } else {
+          toggleAllThis[`ntfeatures-${feature.id}`] = true;
+        }
+      }
+      if (name == "administrator") {
+        const toggleState = !prevState;
+        if (toggleState) {
+          for (const [key, value] of Object.entries(this.state)) {
+            if (key.startsWith("ntfeatures-")) {
+              toggleAllThis[key] = true;
             }
-          }
-          console.info(feature.id, toggleOff);
-          if (toggleOff) {
-            toggleAllThis[`ntfeatures-${feature.id}`] = false;
-          } else {
-            toggleAllThis[`ntfeatures-${feature.id}`] = true;
           }
         }
       }
-      console.info(toggleAllThis);
-      this.setState(toggleAllThis);
+      const allFeatureStates = {};
+      for (const [key, value] of Object.entries(this.state)) {
+        if (key.startsWith("ntfeatures-")) {
+          allFeatureStates[key] = value;
+        }
+      }
+      for (const [key, value] of Object.entries(toggleAllThis)) {
+        if (key.startsWith("ntfeatures-")) {
+          allFeatureStates[key] = value;
+        }
+      }
+
+      const retogglePermissions = {};
+      for (const feature of FEATURES_SETS) {
+        if (!allFeatureStates[`ntfeatures-${feature.id}`]) {
+          for (const permission of feature.permissions) {
+            retogglePermissions[permission.id] = false;
+          }
+        }
+      }
+      for (const feature of FEATURES_SETS) {
+        if (allFeatureStates[`ntfeatures-${feature.id}`]) {
+          for (const permission of feature.permissions) {
+            retogglePermissions[permission.id] = true;
+          }
+        }
+      }
+      this.setState({...toggleAllThis, ...retogglePermissions});
     });
   }
 
-  toggleFeatures(name) {
+  toggleFeatures(name: string) {
     const prevState = this.state[`ntfeatures-${name}`];
     const allFeatureStates = {};
     for (const [key, value] of Object.entries(this.state)) {
@@ -367,7 +421,6 @@ export default class InvitePage extends React.Component {
       }
     }
     allFeatureStates[`ntfeatures-${name}`] = !prevState;
-    console.info(allFeatureStates);
     const retogglePermissions = {};
 
     // toggle permissions based on what enabled on the features.
@@ -388,15 +441,36 @@ export default class InvitePage extends React.Component {
     retogglePermissions[`ntfeatures-${name}`] = !prevState;
 
     this.setState(retogglePermissions);
+  }
 
-    // for (const [key, value] of Object.entries(allFeatureStates)) {
-    //   const onlyId = key.replace("ntfeatures-", "");
-    //   const feature = findFeatureById(onlyId);
-    //   if (feature.strict) {
-    //     toggleShits[key] = true;
-    //   }
-    //   if (feature.)
-    // }
+  KeyToggle(props: KeyToggleProps) {
+    const isAdminToggled = this.state.administrator;
+    const { data, isFeature } = props;
+    let keyName = data.id;
+    if (isFeature) {
+      keyName = `ntfeatures-${data.id}`;
+    }
+    let keyTitle = "";
+    if (data instanceof Perms) {
+      keyTitle = data.name;
+    } else {
+      keyTitle = data.title;
+    }
+    return (
+      <div key={data.id}>
+        <input type="checkbox" checked={this.state[keyName]} onChange={() => {
+          if (data.strict || (data.id !== "administrator" && isAdminToggled)) {
+            return;
+          }
+          if (isFeature) {
+            this.toggleFeatures(data.id);
+          } else {
+            this.togglePerms(data.id);
+          }
+        }} disabled={data.strict || (data.id !== "administrator" && isAdminToggled)} />
+        <label style={{ marginLeft: "0.2rem" }}>{keyTitle}</label>
+      </div>
+    )
   }
 
   render() {
@@ -445,19 +519,11 @@ export default class InvitePage extends React.Component {
       Permissions.priority_speaker
     ]
 
+    const KeyToggle = this.KeyToggle;
     const RENDER_FEATURES = [];
     for (const feature of FEATURES_SETS) {
-      const ntName = `ntfeatures-${feature.id}`;
       RENDER_FEATURES.push(
-        <div key={`ntfeat-${feature.id}`}>
-          <input type="checkbox" checked={this.state[ntName]} onChange={() => {
-            if (feature.strict) {
-              return;
-            }
-            this.toggleFeatures(feature.id);
-          }} disabled={feature.strict} />
-          <label style={{ marginLeft: "0.2rem"}}>{feature.title}</label>
-        </div>
+        <KeyToggle key={`ntfeat-${feature.id}`} data={feature} isFeature />
       )
     }
 
@@ -467,57 +533,27 @@ export default class InvitePage extends React.Component {
           <div className="flex-invite">
             <div className="flex-invite-content">
             <h2>Fitur yang diinginkan</h2>
-            {RENDER_FEATURES.map((r) => {
-              return r;
-            })}
+            {FEATURES_SETS.map((feature) => (
+              <KeyToggle key={`ntfeat-${feature.id}`} data={feature} isFeature />
+            ))}
             </div>
             <div className="flex-invite-content">
               <h2>General Permissions</h2>
-              {GeneralPerms.map(perm => {
-                return (
-                  <div key={perm.id}>
-                    <input type="checkbox" checked={this.state[perm.id]} onChange={() => {
-                      if (perm.strict) {
-                        return;
-                      }
-                      this.togglePerms(perm.id);
-                    }} disabled={perm.strict} />
-                    <label style={{ marginLeft: "0.2rem" }}>{perm.name}</label>
-                  </div>
-                )
-              })}
+              {GeneralPerms.map(perm => (
+                <KeyToggle data={perm} key={perm.id} />
+              ))}
             </div>
             <div className="flex-invite-content">
               <h2>Text Permissions</h2>
-              {TextPerms.map(perm => {
-                return (
-                  <div key={perm.id}>
-                    <input type="checkbox" checked={this.state[perm.id]} onChange={() => {
-                      if (perm.strict) {
-                        return;
-                      }
-                      this.togglePerms(perm.id);
-                    }} disabled={perm.strict} />
-                    <label style={{ marginLeft: "0.2rem" }}>{perm.name}</label>
-                  </div>
-                )
-              })}
+              {TextPerms.map(perm => (
+                <KeyToggle data={perm} key={perm.id} />
+              ))}
             </div>
             <div className="flex-invite-content">
               <h2>Voice Permissions</h2>
-              {VoicePerms.map(perm => {
-                return (
-                  <div key={perm.id}>
-                    <input type="checkbox" checked={this.state[perm.id]} onChange={() => {
-                      if (perm.strict) {
-                        return;
-                      }
-                      this.togglePerms(perm.id);
-                    }} disabled={perm.strict} />
-                    <label style={{ marginLeft: "0.2rem" }}>{perm.name}</label>
-                  </div>
-                )
-              })}
+              {VoicePerms.map(perm => (
+                <KeyToggle data={perm} key={perm.id} />
+              ))}
             </div>
           </div>
           <div className="flex-invite" style={{flexDirection: "column"}}>
