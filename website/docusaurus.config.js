@@ -40,6 +40,11 @@ module.exports={
     ]
   ],
   "themeConfig": {
+    announcementBar: {
+      id: "privacy-update-notice-20211123",
+      content: `Kami memperbaharui kebijakan privasi, mohon periksa <a href="/privasi">di sini</a>`,
+      isCloseable: true,
+    },
     colorMode: {
       defaultMode: "dark"
     },
