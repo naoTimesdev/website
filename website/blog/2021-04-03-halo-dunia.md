@@ -4,7 +4,6 @@ description: Rumah baru untuk dokumentasi naoTimes
 author: N4O
 author_url: "https://github.com/noaione"
 author_image_url: "/img/author/noaione.png"
-image: ""
 ---
 
 Setelah sekian lama memakai docsify sebagai halaman dokumentasi dari Bot ini, akhirnya naoTimes pindah ke rumah baru yaitu [Docusaurus](https://docusaurus.io/).
