@@ -96,9 +96,14 @@ Di laman ini, saya akan menulis semua perubahan pada Bot naoTimes
 - KBBI akan memberikan saran entri kalo tidak bisa menemukan kata yang dicari
 - Otomatis menambah role yang dibuat atau yang dibuat oleh bot ke list member pas tambah utang.
 
-### Versi 3.0.0
+## Versi 3.0.0
 - [Pemutar Musik](/docs/perintah/musik)
 - Rewrite keseluruhan Bot, membuatnya lebih dinamik
 - Menggunakan obyek/model untuk berbagai macam fitur (terutama Showtimes).
 - ODM untuk MongoDB
 - Code splitting
+
+### Versi 3.0.1
+- Perbaikan pada pemutar musik dan masalah lainnya
+- Penambahan kode internal untuk akses bot melalui HTTP server.
+  
