@@ -1,0 +1,7 @@
+.privacy-selector {
+    padding: 0.3rem;
+}
+
+.privacy-selector > option {
+    padding: 0.3rem;
+}
