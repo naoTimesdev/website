@@ -126,7 +126,7 @@ export default class PrivacyPageV2 extends React.Component<{}, SelectorState> {
                             <h1>Kebijakan Privasi</h1>
                             <Selector onChange={this.handleSelection} />
                             <p>
-                                <strong>Pembaharuan terakhir</strong>
+                                <strong>Efektif pada</strong>
                                 {`: ${date}`}
                             </p>
                             <MDXProvider key="mdx-privacy-provider" components={MDXComponents}>
