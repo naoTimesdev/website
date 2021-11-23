@@ -13,6 +13,11 @@
         <link href="https://naoti.me/blog/2021/09/30/versi-300"/>
         <updated>2021-09-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Improvisasi terhadap codebase terutama fitur Showtimes]]></summary>
+        <content type="html"><![CDATA[<p><img src="/assets/img/naotimes_v3.png" alt="ntui Splash"/></p><p>Versi 3.0.0 sudah dirilis dan dapat anda rasakan langsung!</p><p>Setelah sekian lama saya develop versi 3.0.0 ini secara internal (dan sendiri!), akhirnya saya bisa merilis versi baru ini.</p><p>Terima kasih bagi semuanya yang sudah mengsupport naoTimes dan menggunakannya!</p><p>Berikut adalah orang yang membantu development (termasuk saran):</p><ul><li>XCR90 (Tukang nemu bug)</li><li>Kresendo (Bantuan lokalisasi fitur, sugesti fitur)</li></ul><p>Dan berikut adalah kalian yang donasi selama development v3:</p><ul><li>Zulfikar Akbar (Rp32500)</li><li>Rene (Rp2500)</li><li>Anonim (Rp2500)</li><li>Anonim 2 (Rp50000)</li><li>Rangga (Rp10000)</li><li>Pawang Hiu (5$)</li><li>fthyll (Rp25000)</li></ul><p>🥳</p>]]></content>
+        <author>
+            <name>N4O</name>
+            <uri>https://github.com/noaione</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Verified ✅]]></title>
@@ -20,6 +25,12 @@
         <link href="https://naoti.me/blog/2021/06/26/verified"/>
         <updated>2021-06-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Setelah sekian lama sejak Bot ini dibuat, akhirnya Bot ini telah diverifikasi oleh Discord.]]></summary>
+        <content type="html"><![CDATA[<p><img src="/assets/img/verified_thumb.png" alt="Verified!"/></p><p><em>naoTimes sekarang terverifikasi!</em></p><p>Bot ini telah melalui perjalanan lama sebelum akhirnya tiba di versi sekarang.</p><p>Sekitar 1 bulan yang lalu, tepatnya 27 Mei saya dapet email bahwa Bot naoTimes sudah mencapai 75 peladen dan bisa melakukan proses verifikasi. Pada saat itu juga saya submit aplikasi untuk melakukan proses Verifikasi.</p><p>Sekitar beberapa jam lalu setelah saya menulis artikel ini, aplikasi verifikasi Bot naoTimes diterima dan sekarang Bot memiliki tanda centang 😎.</p><hr/><p>Terima kasih pada semuanya yang sudah memakai bot naoTimes dan terus mendukung! <del>Jangan lupa donasinya kakak</del>~</p><p>Salam,<br/>
+N4O</p>]]></content>
+        <author>
+            <name>N4O</name>
+            <uri>https://github.com/noaione</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[naoTimes WebUI]]></title>
@@ -27,6 +38,11 @@
         <link href="https://naoti.me/blog/2021/04/04/naotimes-ui"/>
         <updated>2021-04-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Sebuah website untuk mengatur Garapan di Bot naoTimes melalu browser anda]]></summary>
+        <content type="html"><![CDATA[<p><img src="/assets/img/ntui_img.png" alt="ntui Splash"/></p><p>naoTimes mendapatkan fitur baru!</p><p>Halo-halo, N4O di sini. Fitur ini mulai dibuat karena saya sendiri mulai tertarik untuk mencoba Framework Frontend pada JavaScript.</p><p>Framework yang tak pakai sendiri berubah beberapa kali, dari SvelteKit, ke Next.js, dan akhirnya menyerah dan menggunakan Express.js + EJS dan melakukan rendering secara Server-side.</p><p>Diprakasai dengan TailwindCSS untuk styling, akhirnya bisa ngebuat design website yang lumayan bagus untuk Dashboard.</p><p>naoTimesUI dapat diakses di sini: <a href="https://panel.naoti.me/">https://panel.naoti.me/</a></p><p>Dengan merilis naoTimesUI, semua orang bisa daftar melalui website dan melakukan berbagai macam hal di Website, info lebih lanjut dapat dilihat di sini: <a href="/docs/integrasi/naotimesui">Integrasi naoTimes UI</a></p>]]></content>
+        <author>
+            <name>N4O</name>
+            <uri>https://github.com/noaione</uri>
+        </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Halo Dunia]]></title>
@@ -34,5 +50,10 @@
         <link href="https://naoti.me/blog/2021/04/03/halo-dunia"/>
         <updated>2021-04-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Rumah baru untuk dokumentasi naoTimes]]></summary>
+        <content type="html"><![CDATA[<p>Setelah sekian lama memakai docsify sebagai halaman dokumentasi dari Bot ini, akhirnya naoTimes pindah ke rumah baru yaitu <a href="https://docusaurus.io/">Docusaurus</a>.</p><p>Website sekarang lebih enak diliat, dan gak perlu reload kalo misalkan ada update baru gegara worker yang ngebuat website lama kadang enggak mau ngeupdate dengan konten baru.</p><p>Waktu itu juga gak terlalu nemu alternatif yang bagus, akhirnya pakai itu untuk website sementara.</p><h2>Kenapa pindah?</h2><p>Gak kenapa-napa, Docusaurus sendiri sebenernya lebih berat karena pake React, tapi ngeliat-ngeliat sih lebih enak aja pake ini.</p><p>Plus, ada bonus blog :)</p><h2>Penutup</h2><p>Gak mau panjang-panjang, yang pasti sekarang dokumentasi telah dipindah ke sini, dan semua informasi terbaru akan diusahakan dibuat blog postnya.</p><p><img src="https://p.ihateani.me/xtjfskwl.png" alt="Have a nice day (and have a smiling Towa)"/></p><h6>Have a very cute angel</h6>]]></content>
+        <author>
+            <name>N4O</name>
+            <uri>https://github.com/noaione</uri>
+        </author>
     </entry>
 </feed>
