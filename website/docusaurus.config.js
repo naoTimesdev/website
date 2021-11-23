@@ -81,6 +81,11 @@ module.exports={
           label: "Donasi"
         },
         {
+          href: "/legal",
+          position: "right",
+          label: "Legal"
+        },
+        {
           href: "https://github.com/naoTimesdev/naoTimes",
           position: "right",
           className: "header-github-link",
