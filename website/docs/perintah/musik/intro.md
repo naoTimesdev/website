@@ -19,8 +19,10 @@ naoTimes support menyetel musik dari platform berikut:
 - Soundcloud
 - Bandcamp
 - **Spotify (Native)**
+- **Tidal (Native)**
 
 Fitur Spotify ini merupakan playback langsung dari Spotify dan tidak melalui 3rd party seperti Youtube.
+Fitur Tidal juga merupakan playback langsung dari Tidal dan tidal melalui 3rd party, untuk bot official kami menyediakan sampai kualitas Master.
 
 Sedikit peringatan bahwa fitur Spotify dapat hilang kapan saja dan sangat tidak stabil.
 
