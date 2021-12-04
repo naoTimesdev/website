@@ -153,6 +153,16 @@ const FEATURES_SETS: Feature[] = [
     permissions: [Permissions.embed_links, Permissions.add_reactions, Permissions.read_messages_history, Permissions.manage_messages],
   },
   {
+    id: "musik",
+    title: "Pemutar Musik",
+    permissions: [
+      Permissions.embed_links,
+      Permissions.connect_voice,
+      Permissions.speak_voice,
+      Permissions.priority_speaker,
+    ]
+  },
+  {
     id: "modlogs",
     title: "Tinjauan Moderasi (Logging)",
     permissions: [
@@ -189,6 +199,7 @@ const FEATURES_SETS: Feature[] = [
       Permissions.manage_messages,
       Permissions.manage_role,
       Permissions.ban_members,
+      Permissions.mute_members,
     ]
   },
   {
