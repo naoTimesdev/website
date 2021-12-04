@@ -24,7 +24,7 @@ naoTimes support menyetel musik dari platform berikut:
 Fitur Spotify ini merupakan playback langsung dari Spotify dan tidak melalui 3rd party seperti Youtube.
 Fitur Tidal juga merupakan playback langsung dari Tidal dan tidal melalui 3rd party, untuk bot official kami menyediakan sampai kualitas Master.
 
-Sedikit peringatan bahwa fitur Spotify dapat hilang kapan saja dan sangat tidak stabil.
+Sedikit peringatan bahwa fitur Spotify dapat hilang kapan saja dan sangat tidak stabil. Untuk fitur Tidal sendiri, sama seperti fitur Spotify ini lebih tidak stabil lagi dikarenakan file size dan Lavaplayer terkadang gagal melakukan playback.
 
 Fitur lain:
 - Sistem queue
