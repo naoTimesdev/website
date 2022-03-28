@@ -107,3 +107,11 @@ Di laman ini, saya akan menulis semua perubahan pada Bot naoTimes
 - Perbaikan pada pemutar musik dan masalah lainnya
 - Penambahan kode internal untuk akses bot melalui HTTP server.
 - Penambahan support native [Tidal](https://tidal.com/browse) untuk pemutar musik.
+
+## Versi 3.1.0
+**Akan datang**
+
+- Ganti ke [disnake](https://disnake.dev/) untuk library internal.
+- Perintah Pengingat
+- Perbaikan modul musik
+- Sistem playlist musik

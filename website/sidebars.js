@@ -32,6 +32,7 @@ module.exports = {
                         "perintah/fun/tanya",
                         "perintah/fun/random",
                         "perintah/fun/reaksi",
+                        "perintah/fun/pengingat",
                     ]
                 },
                 {
