@@ -2,6 +2,7 @@
 import Layout from "@theme/Layout";
 import React from "react";
 
+const DEFAULTURL = "https://discord.com/oauth2/authorize?client_id=558256913926848537&permissions=1497206484470&scope=bot%20applications.commands";
 
 class Perms {
   id: string;
@@ -512,19 +513,22 @@ export default class InvitePage extends React.Component<{}, InviteState> {
     } else {
       keyTitle = data.title;
     }
+
+    const toggler = () => {
+      if (data.strict || (data.id !== "administrator" && isAdminToggled)) {
+        return;
+      }
+      if (isFeature) {
+        this.toggleFeatures(data.id);
+      } else {
+        this.togglePerms(data.id);
+      }
+    }
+
     return (
       <div key={data.id}>
-        <input type="checkbox" checked={this.state[keyName]} onChange={() => {
-          if (data.strict || (data.id !== "administrator" && isAdminToggled)) {
-            return;
-          }
-          if (isFeature) {
-            this.toggleFeatures(data.id);
-          } else {
-            this.togglePerms(data.id);
-          }
-        }} disabled={data.strict || (data.id !== "administrator" && isAdminToggled)} />
-        <label style={{ marginLeft: "0.2rem" }} className={isOauth ? "color-oauth" : null}>{keyTitle}</label>
+        <input type="checkbox" checked={this.state[keyName]} onChange={toggler} disabled={data.strict || (data.id !== "administrator" && isAdminToggled)} />
+        <label onClick={toggler} style={{ marginLeft: "0.2rem", cursor: "pointer" }} className={isOauth ? "color-oauth" : null}>{keyTitle}</label>
       </div>
     )
   }
@@ -595,7 +599,7 @@ export default class InvitePage extends React.Component<{}, InviteState> {
               <KeyToggle key={`ntfeat-${feature.id}`} data={feature} isFeature />
             ))}
             </div>
-            <div className="flex-invite-content">
+            <div className="flex-invite-content" style={{alignItems: "center"}}>
               <div className="flex-invite" style={{margin: "0rem"}}>
                 <div className="flex-invite-content">
                   <h2>General Permissions</h2>
@@ -616,9 +620,12 @@ export default class InvitePage extends React.Component<{}, InviteState> {
                   ))}
                 </div>
               </div>
-              <div className="flex-invite" style={{flexDirection: "column", textAlign: "center"}}>
-                <p style={{margin: "0rem"}}>Jika ada <span className="color-oauth">warna ini</span>...</p>
-                <p>Anda harus mengaktifkan 2FA (Two-Factor Authentication) di akun anda.</p>
+              <div className="flex-invite" style={{flexDirection: "column", textAlign: "center", margin: "0rem", paddingTop: "0.5rem"}}>
+                <p style={{margin: "0rem"}}>Jika ada <span className="color-oauth" style={{ cursor: "pointer", userSelect: "none" }}>warna ini</span>...</p>
+                <p style={{margin: "0rem"}}>Anda harus mengaktifkan 2FA (Two-Factor Authentication) di akun anda.</p>
+              </div>
+              <div className="flex-invite" style={{flexDirection: "column", textAlign: "center", margin: "0rem", paddingTop: "0.5rem"}}>
+                <p style={{margin: "0rem"}}>Jika anda tidak bisa menggunakan sistem invite, Silakan gunakan <a href={DEFAULTURL}>link berikut</a></p>
               </div>
             </div>
           </div>
