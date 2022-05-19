@@ -19,50 +19,95 @@ class Perms {
   }
 }
 
-type PermissionTypes = {[key: string]: Perms};
+var perms = {
+  generalViewChannels: 1024,
+  generalCreateInvite: 1,
+  generalKickMembers: 2,
+  generalBanMembers: 4,
+  generalAdministrator: 8,
+  generalManageChannels: 16,
+  generalManageGuild: 32,
+  generalChangeNickname: 67108864,
+  generalManageNicknames: 134217728,
+  generalManageRoles: 268435456,
+  generalManageWebhooks: 536870912,
+  generalManageEmojis: 1073741824,
+  generalViewAuditLog: 128,
+  generalViewGuildInsights: 524288,
+  generalManageEvents: 8589934592,
+  generalModerateMembers: 1099511627776,
+  textAddReactions: 64,
+  textSendMessages: 2048,
+  textSendMessagesThreads: 274877906944,
+  textCreatePublicThreads: 34359738368,
+  textCreatePrivateThreads: 68719476736,
+  textSendTTSMessages: 4096,
+  textManageMessages: 8192,
+  textManageThreads: 17179869184,
+  textEmbedLinks: 16384,
+  textAttachFiles: 32768,
+  textReadMessageHistory: 65536,
+  textMentionEveryone: 131072,
+  textUseExternalEmojis: 262144,
+  textUseExternalStickers: 137438953472,
+  textUseSlashCommands: 2147483648,
+  voiceConnect: 1048576,
+  voiceSpeak: 2097152,
+  voiceStream: 512,
+  voiceMuteMembers: 4194304,
+  voiceDeafenMembers: 8388608,
+  voiceMoveMembers: 16777216,
+  voiceUseVAD: 33554432,
+  voiceStartActivities: 549755813888,
+  voicePrioritySpeaker: 256,
+  voiceStageRequestSpeak: 4294967296
+}
 
-const Permissions: PermissionTypes = {
+const Permissions = {
   // General
-  create_invites: new Perms("create_invites", "Create Invites", 0x1),
-  kick_members: new Perms("kick_members", "Kick Members", 0x2, true),
-  ban_members: new Perms("ban_members", "Ban Members", 0x4, true),
-  administrator: new Perms("administrator", "Administrator", 0x8, true),
-  manage_channels: new Perms("manage_channels", "Manage Channels", 0x10, true),
-  manage_guild: new Perms("manage_guild", "Manage Server", 0x20, true),
-  change_nickname: new Perms("change_nickname", "Change Nickname", 0x4000000),
-  manage_nickname: new Perms("manage_nickname", "Manage Nickname", 0x8000000),
-  manage_role: new Perms("manage_role", "Manage Roles", 0x10000000, true),
-  manage_webhook: new Perms("manage_webhook", "Manage Webhooks", 0x20000000, true),
-  manage_emoji_stickers: new Perms("manage_emoji_stickers", "Manage Emoji and Stickers", 0x40000000),
-  manage_threads: new Perms("manage_threads", "Manage Threads", 0x400000000, true),
-  view_audit_log: new Perms("view_audit_log", "View Audit Log", 0x80),
-  view_guild_insights: new Perms("view_guild_insights", "View Server Insights", 0x80000),
+  create_invites: new Perms("create_invites", "Create Invites", 1),
+  kick_members: new Perms("kick_members", "Kick Members", 2, true),
+  ban_members: new Perms("ban_members", "Ban Members", 4, true),
+  administrator: new Perms("administrator", "Administrator", 8, true),
+  manage_channels: new Perms("manage_channels", "Manage Channels", 16, true),
+  manage_guild: new Perms("manage_guild", "Manage Server", 32, true),
+  change_nickname: new Perms("change_nickname", "Change Nickname", 67108864),
+  manage_nickname: new Perms("manage_nickname", "Manage Nickname", 134217728),
+  manage_role: new Perms("manage_role", "Manage Roles", 268435456, true),
+  manage_webhook: new Perms("manage_webhook", "Manage Webhooks", 536870912, true),
+  manage_emoji_stickers: new Perms("manage_emoji_stickers", "Manage Emoji and Stickers", 1073741824),
+  view_audit_log: new Perms("view_audit_log", "View Audit Log", 128),
+  // view_guild_insights: new Perms("view_guild_insights", "View Server Insights", 524288),
+  view_channel: new Perms("view_channel", "Read Messages/View Channels", 1024, false, true),
+  manage_events: new Perms("manage_events", "Manage Events", 8589934592),
+  moderate_members: new Perms("moderate_members", "Moderate Members", 1099511627776),
   // Text
-  view_channel: new Perms("view_channel", "View Channel", 0x400, false, true),
-  add_reactions: new Perms("add_reactions", "Add Reactions", 0x40),
-  read_messages: new Perms("read_messages", "Read Messages", 0x400, false, true),
-  send_messages: new Perms("send_messages", "Send Messages", 0x800, false, true),
-  use_public_threads: new Perms("use_public_threads", "Use Public Threads", 0x800000000, false, true),
-  use_private_threads: new Perms("use_private_threads", "Use Private Threads", 0x1000000000),
-  send_messages_in_threads: new Perms("send_messages_in_threads", "Send Messages in Threads", 0x4000000000, false, true),
-  send_tts_messages: new Perms("send_tts_messages", "Send TTS Messages", 0x1000),
-  manage_messages: new Perms("manage_messages", "Manage Messages", 0x2000, true),
-  embed_links: new Perms("embed_links", "Embed Links", 0x4000, false, true),
-  attach_files: new Perms("attach_files", "Attach Files", 0x8000),
-  read_messages_history: new Perms("read_messages_history", "Read Messages History", 0x10000),
-  mention_everyone: new Perms("mention_everyone", "Mention Everyone", 0x20000),
-  external_emojis: new Perms("external_emojis", "Use External Emojis", 0x40000, false, true),
-  external_stickers: new Perms("external_stickers", "Use External Stickers", 0x2000000000),
-  use_slash_commands: new Perms("use_slash_commands", "Use Slash Commands", 0x80000000, false, true),
+  send_messages: new Perms("send_messages", "Send Messages", 2048, false, true),
+  use_public_threads: new Perms("use_public_threads", "Create Public Threads", 34359738368, false, true),
+  use_private_threads: new Perms("use_private_threads", "Create Private Threads", 68719476736),
+  send_messages_in_threads: new Perms("send_messages_in_threads", "Send Messages in Threads", 274877906944, false, true),
+  send_tts_messages: new Perms("send_tts_messages", "Send TTS Messages", 4096),
+  manage_messages: new Perms("manage_messages", "Manage Messages", 8192, true),
+  manage_threads: new Perms("manage_threads", "Manage Threads", 17179869184, true),
+  embed_links: new Perms("embed_links", "Embed Links", 16384, false, true),
+  attach_files: new Perms("attach_files", "Attach Files", 32768, false, true),
+  read_messages_history: new Perms("read_messages_history", "Read Messages History", 65536),
+  mention_everyone: new Perms("mention_everyone", "Mention Everyone", 131072),
+  external_emojis: new Perms("external_emojis", "Use External Emojis", 262144, false, true),
+  external_stickers: new Perms("external_stickers", "Use External Stickers", 137438953472),
+  use_slash_commands: new Perms("use_slash_commands", "Use Application Commands", 2147483648, false, true),
+  add_reactions: new Perms("add_reactions", "Add Reactions", 64),
   // Voice
-  connect_voice: new Perms("connect_voice", "Connect", 0x100000),
-  speak_voice: new Perms("speak_voice", "Speak", 0x200000),
-  stream_voice: new Perms("stream_voice", "Video", 0x200),
-  mute_members: new Perms("mute_members", "Mute Members", 0x400000),
-  deafen_members: new Perms("deafen_members", "Deafen Members", 0x800000),
-  move_members: new Perms("move_members", "Move Members", 0x1000000),
-  use_voice_activity: new Perms("use_voice_activity", "Use Voice Activity", 0x2000000),
-  priority_speaker: new Perms("priority_speaker", "Priority Speaker", 0x100),
+  connect_voice: new Perms("connect_voice", "Connect", 1048576),
+  speak_voice: new Perms("speak_voice", "Speak", 2097152),
+  // stream_voice: new Perms("stream_voice", "Video", 512),
+  mute_members: new Perms("mute_members", "Mute Members", 4194304),
+  deafen_members: new Perms("deafen_members", "Deafen Members", 8388608),
+  move_members: new Perms("move_members", "Move Members", 16777216),
+  use_voice_activity: new Perms("use_voice_activity", "Use Voice Activity", 33554432),
+  // start_activities: new Perms("start_activities", "Start Activities", 549755813888),
+  priority_speaker: new Perms("priority_speaker", "Priority Speaker", 256),
+  // stage_request_speak: new Perms("stage_request_speak", "Stage Request to Speak", 4294967296),
 }
 
 interface Feature {
@@ -78,10 +123,10 @@ const FEATURES_SETS: Feature[] = [
     title: "Base (Semua hal yang diperlukan agar naoTimes dapat jalan)",
     permissions: [
       Permissions.send_messages,
-      Permissions.read_messages,
       Permissions.send_messages_in_threads,
       Permissions.use_public_threads,
       Permissions.embed_links,
+      Permissions.attach_files,
       Permissions.view_channel,
       Permissions.use_slash_commands,
     ],
@@ -140,7 +185,7 @@ const FEATURES_SETS: Feature[] = [
   {
     id: "user_info",
     title: "User Info",
-    permissions: [Permissions.embed_links, Permissions.attach_files],
+    permissions: [Permissions.embed_links],
   },
   {
     id: "fun_question",
@@ -169,9 +214,7 @@ const FEATURES_SETS: Feature[] = [
       Permissions.embed_links,
       Permissions.read_messages_history,
       Permissions.view_audit_log,
-      Permissions.attach_files,
       Permissions.external_emojis,
-      Permissions.view_guild_insights,
       Permissions.manage_threads,
     ]
   },
@@ -180,7 +223,6 @@ const FEATURES_SETS: Feature[] = [
     title: "Moderasi: Automoderator",
     permissions: [
       Permissions.manage_messages,
-      Permissions.read_messages,
       Permissions.read_messages_history,
     ]
   },
@@ -200,6 +242,7 @@ const FEATURES_SETS: Feature[] = [
       Permissions.manage_role,
       Permissions.ban_members,
       Permissions.mute_members,
+      Permissions.moderate_members,
     ]
   },
   {
@@ -303,6 +346,7 @@ interface InviteState extends PermissionMember {
 interface KeyToggleProps {
   data: Perms | Feature;
   isFeature?: boolean;
+  isOauth?: boolean;
 }
 
 export default class InvitePage extends React.Component<{}, InviteState> {
@@ -368,6 +412,7 @@ export default class InvitePage extends React.Component<{}, InviteState> {
   togglePerms(name: string) {
     const prevState = this.state[name];
     const toggleAllThis = {};
+    // @ts-ignore
     this.setState({[name]: !prevState}, () => {
       for (const feature of FEATURES_SETS) {
         let toggleOff = false;
@@ -456,7 +501,7 @@ export default class InvitePage extends React.Component<{}, InviteState> {
 
   KeyToggle(props: KeyToggleProps) {
     const isAdminToggled = this.state.administrator;
-    const { data, isFeature } = props;
+    const { data, isFeature, isOauth } = props;
     let keyName = data.id;
     if (isFeature) {
       keyName = `ntfeatures-${data.id}`;
@@ -479,7 +524,7 @@ export default class InvitePage extends React.Component<{}, InviteState> {
             this.togglePerms(data.id);
           }
         }} disabled={data.strict || (data.id !== "administrator" && isAdminToggled)} />
-        <label style={{ marginLeft: "0.2rem" }}>{keyTitle}</label>
+        <label style={{ marginLeft: "0.2rem" }} className={isOauth ? "color-oauth" : null}>{keyTitle}</label>
       </div>
     )
   }
@@ -489,7 +534,7 @@ export default class InvitePage extends React.Component<{}, InviteState> {
     const GeneralPerms = [
       Permissions.administrator,
       Permissions.view_audit_log,
-      Permissions.view_guild_insights,
+      // Permissions.view_guild_insights,
       Permissions.manage_guild,
       Permissions.manage_role,
       Permissions.manage_channels,
@@ -501,6 +546,8 @@ export default class InvitePage extends React.Component<{}, InviteState> {
       Permissions.manage_emoji_stickers,
       Permissions.manage_webhook,
       Permissions.view_channel,
+      Permissions.manage_events,
+      Permissions.moderate_members,
     ]
     const TextPerms = [
       Permissions.send_messages,
@@ -522,7 +569,7 @@ export default class InvitePage extends React.Component<{}, InviteState> {
     const VoicePerms = [
       Permissions.connect_voice,
       Permissions.speak_voice,
-      Permissions.stream_voice,
+      // Permissions.stream_voice,
       Permissions.mute_members,
       Permissions.deafen_members,
       Permissions.move_members,
@@ -549,22 +596,30 @@ export default class InvitePage extends React.Component<{}, InviteState> {
             ))}
             </div>
             <div className="flex-invite-content">
-              <h2>General Permissions</h2>
-              {GeneralPerms.map(perm => (
-                <KeyToggle data={perm} key={perm.id} />
-              ))}
-            </div>
-            <div className="flex-invite-content">
-              <h2>Text Permissions</h2>
-              {TextPerms.map(perm => (
-                <KeyToggle data={perm} key={perm.id} />
-              ))}
-            </div>
-            <div className="flex-invite-content">
-              <h2>Voice Permissions</h2>
-              {VoicePerms.map(perm => (
-                <KeyToggle data={perm} key={perm.id} />
-              ))}
+              <div className="flex-invite" style={{margin: "0rem"}}>
+                <div className="flex-invite-content">
+                  <h2>General Permissions</h2>
+                  {GeneralPerms.map(perm => (
+                    <KeyToggle data={perm} key={perm.id} isOauth={perm.oauth} />
+                  ))}
+                </div>
+                <div className="flex-invite-content">
+                  <h2>Text Permissions</h2>
+                  {TextPerms.map(perm => (
+                    <KeyToggle data={perm} key={perm.id} isOauth={perm.oauth} />
+                  ))}
+                </div>
+                <div className="flex-invite-content">
+                  <h2>Voice Permissions</h2>
+                  {VoicePerms.map(perm => (
+                    <KeyToggle data={perm} key={perm.id} isOauth={perm.oauth} />
+                  ))}
+                </div>
+              </div>
+              <div className="flex-invite" style={{flexDirection: "column", textAlign: "center"}}>
+                <p style={{margin: "0rem"}}>Jika ada <span className="color-oauth">warna ini</span>...</p>
+                <p>Anda harus mengaktifkan 2FA (Two-Factor Authentication) di akun anda.</p>
+              </div>
             </div>
           </div>
           <div className="flex-invite" style={{flexDirection: "column"}}>

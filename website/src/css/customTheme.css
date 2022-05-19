@@ -55,6 +55,10 @@ span.DocSearch-Button-Placeholder {
   margin-bottom: 1rem;
 }
 
+.color-oauth {
+  color: #eb9e2b;
+}
+
 @media (min-width: 768px) {
   .flex-invite {
     flex-direction: row;
