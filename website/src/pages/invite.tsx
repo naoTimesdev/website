@@ -528,7 +528,7 @@ export default class InvitePage extends React.Component<{}, InviteState> {
     return (
       <div key={data.id}>
         <input type="checkbox" checked={this.state[keyName]} onChange={toggler} disabled={data.strict || (data.id !== "administrator" && isAdminToggled)} />
-        <label onClick={toggler} style={{ marginLeft: "0.2rem", cursor: "pointer" }} className={isOauth ? "color-oauth" : null}>{keyTitle}</label>
+        <label onClick={toggler} style={{ marginLeft: "0.2rem", cursor: "pointer" }} className={isOauth ? "color-oauth" : ""}>{keyTitle}</label>
       </div>
     )
   }
@@ -582,7 +582,7 @@ export default class InvitePage extends React.Component<{}, InviteState> {
     ]
 
     const KeyToggle = this.KeyToggle;
-    const RENDER_FEATURES = [];
+    const RENDER_FEATURES: JSX.Element[] = [];
     for (const feature of FEATURES_SETS) {
       RENDER_FEATURES.push(
         <KeyToggle key={`ntfeat-${feature.id}`} data={feature} isFeature />

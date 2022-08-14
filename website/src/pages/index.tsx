@@ -85,6 +85,7 @@ export default function IndexHomePage() {
         </p>
         <div style={Styles.shieldContainer}>
           <img src="https://img.shields.io/endpoint?color=%231c7d9a&logo=discord&logoColor=white&style=for-the-badge&url=https%3A%2F%2Fapi.ihateani.me%2Fshield%2Fserver" alt="Server Count" />
+          <img src="https://img.shields.io/endpoint?color=%231c7d9a&logo=discord&logoColor=white&style=for-the-badge&url=https%3A%2F%2Fapi.ihateani.me%2Fshield%2Fshowtimes" alt="Showtimes Count" />
           <img src="https://img.shields.io/uptimerobot/status/m786469671-606ba8f8deaf00978879eb7d?label=Bot&style=for-the-badge" alt="Uptime Status" />
         </div>
         <div style={Styles.linkContainer}>
