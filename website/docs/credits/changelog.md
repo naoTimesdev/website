@@ -111,7 +111,13 @@ Di laman ini, saya akan menulis semua perubahan pada Bot naoTimes
 ## Versi 3.1.0
 **Akan datang**
 
-- Ganti ke [disnake](https://disnake.dev/) untuk library internal.
+- Ganti balik ke [discord.py](https://github.com/Rapptz/discord.py) untuk library internal.
 - Perintah Pengingat
-- Perbaikan modul musik
+- Perbaikan beberapa modul musik
+- Fitur lirik sekarang menggunakan data dari Musixmatch, Spotify, Genius, dan lain-lain.
+- **Showtimes** mendapatkan fitur baru: [`!aturrole`](/docs/perintah/showtimes/admin)
+
+## Versi 3.2.0
+**Akan datang**
+
 - Sistem playlist musik
