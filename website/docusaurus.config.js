@@ -138,7 +138,7 @@ module.exports={
             },
             {
               label: "Status",
-              href: "https://status.naoti.me/"
+              href: "https://status.n4o.xyz/status/naotimes"
             },
             {
               label: "ihateani.me",
