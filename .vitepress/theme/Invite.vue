@@ -604,7 +604,7 @@ const inviteLink = computed(() => {
     <div class="invite-wrapper">
       <div class="flex-invite">
         <div class="flex-invite-content">
-          <h2>Fitur yang diinginkan</h2>
+          <h2 class="head-text">Fitur yang diinginkan</h2>
           <InviteToggle v-for="feature in FEATURES_SETS" :pid="feature.id" :invite="inviteState[`ntfeatures-${feature.id}`]" @feature="toggleFeatures" :globalToggle="inviteState.administrator" :strict="feature.strict">
             {{ feature.title }}
           </InviteToggle>
@@ -612,19 +612,19 @@ const inviteLink = computed(() => {
         <div class="flex-invite-content" :style='{ alignItems: "center" }'>
           <div className="flex-invite" :style='{ margin: "0rem" }'>
             <div class="flex-invite-content">
-              <h2>General Permissions</h2>
+              <h2 class="head-text">General Permissions</h2>
               <InviteToggle v-for="perm in GeneralPerms" :pid="perm.id" :invite="inviteState[perm.id]" @perms="togglePerms" :strict="perm.strict" :oauth="perm.oauth" :globalToggle="inviteState.administrator">
                 {{ perm.name }}
               </InviteToggle>
             </div>
             <div class="flex-invite-content">
-              <h2>Text Permissions</h2>
+              <h2 class="head-text">Text Permissions</h2>
               <InviteToggle v-for="perm in TextPerms" :pid="perm.id" :invite="inviteState[perm.id]" @perms="togglePerms" :strict="perm.strict" :oauth="perm.oauth" :globalToggle="inviteState.administrator">
                 {{ perm.name }}
               </InviteToggle>
             </div>
             <div class="flex-invite-content">
-              <h2>Voice Permissions</h2>
+              <h2 class="head-text">Voice Permissions</h2>
               <InviteToggle v-for="perm in VoicePerms" :pid="perm.id" :invite="inviteState[perm.id]" @perms="togglePerms" :strict="perm.strict" :oauth="perm.oauth" :globalToggle="inviteState.administrator">
                 {{ perm.name }}
               </InviteToggle>
@@ -655,6 +655,13 @@ const inviteLink = computed(() => {
 </template>
 
 <style scoped>
+.head-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
 .color-auth-click {
   cursor: pointer;
   user-select: none;
