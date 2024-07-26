@@ -36,3 +36,5 @@ website/i18n/**/*
 #!website/i18n/fr/**/*
 
 .netlify
+.vitepress/dist/
+.vitepress/cache/

@@ -1,0 +1,16 @@
+{
+  "name": "naotimesdocs",
+  "version": "2.0.0",
+  "description": "Dokumentasi - Bot berbahasa Indonesia untuk membantu tracking garapan fansubber",
+  "author": "naoTimesdev",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.3.1"
+  },
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  }
+}
