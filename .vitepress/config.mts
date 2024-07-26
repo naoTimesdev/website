@@ -184,7 +184,7 @@ export default defineConfig({
     ['meta', { property: 'og:site_name', content: 'naoTimes' }],
     ['meta', { property: 'og:image', content: 'https://naoti.me/assets/img/nt256.png' }],
     ['meta', { property: 'og:url', content: 'https://naoti.me/' }],
-    ['script', { src: 'https://tr.n4o.xyz/js/plausible.js', async: '', defer: '', 'data-domain': 'naoti.me' }]
+    ['script', { src: 'https://tr.n4o.xyz/js/37a79777T080eR4f52A99e2Ica9619a85a5d.js', async: '', defer: '', 'data-domain': 'naoti.me', 'data-api': 'https://tr.n4o.xyz/magic/18c5dcddMc036A4d1dGb785Iaa2e310238c9' }]
   ],
 
   themeConfig: {
