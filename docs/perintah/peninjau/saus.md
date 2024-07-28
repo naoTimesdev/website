@@ -1,5 +1,6 @@
 ---
 title: Pencari Saus
+next: 'Showtimes'
 ---
 
 # {{ $frontmatter.title }}

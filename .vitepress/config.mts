@@ -77,15 +77,15 @@ function sidebarDocs(): DefaultTheme.SidebarItem[] {
           ]
         },
         {
-          text: 'Moderasi',
+          text: 'Showtimes',
           collapsed: false,
           items: [
-            { text: 'Introduksi', link: '/docs/perintah/mod/intro' },
-            { text: 'Pengunjung', link: '/docs/perintah/mod/user' },
-            { text: 'Staf', link: '/docs/perintah/mod/staff' },
-            { text: 'Administrasi', link: '/perintah/mod/admin' },
-            { text: 'Alias', link: '/docs/perintah/mod/alias' },
-            { text: 'Kolaborasi', link: '/docs/perintah/mod/kolaborasi' },
+            { text: 'Introduksi', link: '/docs/perintah/showtimes/' },
+            { text: 'Pengunjung', link: '/docs/perintah/showtimes/user' },
+            { text: 'Staf', link: '/docs/perintah/showtimes/staff' },
+            { text: 'Administrasi', link: '/perintah/showtimes/admin' },
+            { text: 'Alias', link: '/docs/perintah/showtimes/alias' },
+            { text: 'Kolaborasi', link: '/docs/perintah/showtimes/kolaborasi' },
           ]
         },
         {
