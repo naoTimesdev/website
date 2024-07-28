@@ -12,7 +12,7 @@ hero:
     - theme: brand
       text: Invite
       link: /invite
-    - theme: alt
+    - theme: brand
       text: Dokumentasi
       link: /docs
     - theme: alt
@@ -23,20 +23,25 @@ hero:
     alt: naoTimes Logo
 
 features:
-  - title: Integrasi dengan Discord
+  - title: Discord
     details: Cukup gunakan Discord untuk mengatur informasi group anda
-    icon: 🛠️
-  - title: Announcement ke User
-    details: Bantu memberitahu user anda dengan informasi terbaru garapan tanpa ribet!
+    icon: ⌨️
+    link: /invite
+  - title: Laman Web
+    details: Lihat dan beritahu informasi garapan anda dengan kode simpel yang bisa di tambah ke website anda sendiri!
     icon: 📢
-  - title: Embedable
-    details: Lihat informasi garapan anda dengan kode simpel yang bisa di tambah ke website anda sendiri!
-    icon: 🪡
+    link: /docs/integrasi/website
+  - title: Atur Garapan
+    details: Gunakan Web UI naoTimes untuk melihat informasi garapan dengan lebih mudah!
+    icon: 🌐
+    link: /docs/integrasi/naotimesui
 ---
 
 <style>
-.VPHero.has-image .image-src {
-  /* rotate image by some degreess */
-  transform: translate(-50%, -50%) rotateZ(-4deg);
+@media (min-width: 960px) {
+  .VPHero.has-image .image-src {
+    /* rotate image by some degreess */
+    transform: translate(-50%, -50%) rotateZ(-4deg);
+  }
 }
 </style>

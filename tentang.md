@@ -8,13 +8,15 @@ import { VPTeamMembers } from 'vitepress/theme'
 const members = [
   {
     avatar: 'https://avatars.githubusercontent.com/u/34302902?v=4',
-    name: 'noaione',
-    title: 'Pembuat',
+    name: 'N4O',
+    title: 'Kreator, Lead Developer',
     links: [
-      { icon: 'github', link: 'https://github.com/noaione' },
-      { icon: 'discord', link: 'https://discord.com/users/466469077444067372' },
-      { icon: 'email', link: 'noaione@n4o.xys' },
-    ]
+      { icon: 'github', link: 'https://github.com/noaione', ariaLabel: 'GitHub' },
+      { icon: 'discord', link: 'https://discord.com/users/466469077444067372', ariaLabel: 'Discord: @noaione' },
+      { icon: 'email', link: 'mailto:noaione@n4o.xys', ariaLabel: 'Email' },
+    ],
+    sponsor: '/donasi',
+    actionText: 'Donasi',
   },
 ]
 </script>

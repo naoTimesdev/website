@@ -12,6 +12,7 @@ Jika anda ingin berdonasi kepada kami, anda dapat menggunakan website-website be
 - [KaryaKarsa](https://karyakarsa.com/noaione) (IDR)
 - [Ko-fi](https://ko-fi.com/noaione) (USD)
 - [Liberapay](https://liberapay.com/noaione) (USD)
+- [GitHub Sponsor](https://github.com/sponsors/noaione) (USD)
 
 Dengan berdonasi dengan nominal minimal <u>**IDR 15.000**</u> atau <u>**1$**</u>, anda dapat mengakses fitur premium berikut:
 - FansubRSS Premium
