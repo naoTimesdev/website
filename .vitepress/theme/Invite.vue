@@ -20,69 +20,27 @@ class Perms {
   }
 }
 
-
-const perms = {
-  generalViewChannels: 1024,
-  generalCreateInvite: 1,
-  generalKickMembers: 2,
-  generalBanMembers: 4,
-  generalAdministrator: 8,
-  generalManageChannels: 16,
-  generalManageGuild: 32,
-  generalChangeNickname: 67108864,
-  generalManageNicknames: 134217728,
-  generalManageRoles: 268435456,
-  generalManageWebhooks: 536870912,
-  generalManageEmojis: 1073741824,
-  generalViewAuditLog: 128,
-  generalViewGuildInsights: 524288,
-  generalManageEvents: 8589934592,
-  generalModerateMembers: 1099511627776,
-  textAddReactions: 64,
-  textSendMessages: 2048,
-  textSendMessagesThreads: 274877906944,
-  textCreatePublicThreads: 34359738368,
-  textCreatePrivateThreads: 68719476736,
-  textSendTTSMessages: 4096,
-  textManageMessages: 8192,
-  textManageThreads: 17179869184,
-  textEmbedLinks: 16384,
-  textAttachFiles: 32768,
-  textReadMessageHistory: 65536,
-  textMentionEveryone: 131072,
-  textUseExternalEmojis: 262144,
-  textUseExternalStickers: 137438953472,
-  textUseSlashCommands: 2147483648,
-  voiceConnect: 1048576,
-  voiceSpeak: 2097152,
-  voiceStream: 512,
-  voiceMuteMembers: 4194304,
-  voiceDeafenMembers: 8388608,
-  voiceMoveMembers: 16777216,
-  voiceUseVAD: 33554432,
-  voiceStartActivities: 549755813888,
-  voicePrioritySpeaker: 256,
-  voiceStageRequestSpeak: 4294967296
-}
-
 const Permissions = {
   // General
-  create_invites: new Perms("create_invites", "Create Invites", 1),
+  administrator: new Perms("administrator", "Administrator", 8, true),
+  view_audit_log: new Perms("view_audit_log", "View Audit Log", 128),
+  manage_guild: new Perms("manage_guild", "Manage Server", 32, true),
+  manage_role: new Perms("manage_role", "Manage Roles", 268435456, true),
+  manage_channels: new Perms("manage_channels", "Manage Channels", 16, true),
   kick_members: new Perms("kick_members", "Kick Members", 2, true),
   ban_members: new Perms("ban_members", "Ban Members", 4, true),
-  administrator: new Perms("administrator", "Administrator", 8, true),
-  manage_channels: new Perms("manage_channels", "Manage Channels", 16, true),
-  manage_guild: new Perms("manage_guild", "Manage Server", 32, true),
+  create_invites: new Perms("create_invites", "Create Instant Invite", 1),
   change_nickname: new Perms("change_nickname", "Change Nickname", 67108864),
   manage_nickname: new Perms("manage_nickname", "Manage Nickname", 134217728),
-  manage_role: new Perms("manage_role", "Manage Roles", 268435456, true),
+  manage_expressions: new Perms("manage_expressions", "Manage Expressions", 1073741824),
+  create_expressions: new Perms("create_expressions", "Create Expressions", 8796093022208),
   manage_webhook: new Perms("manage_webhook", "Manage Webhooks", 536870912, true),
-  manage_emoji_stickers: new Perms("manage_emoji_stickers", "Manage Emoji and Stickers", 1073741824),
-  view_audit_log: new Perms("view_audit_log", "View Audit Log", 128),
-  // view_guild_insights: new Perms("view_guild_insights", "View Server Insights", 524288),
-  view_channel: new Perms("view_channel", "Read Messages/View Channels", 1024, false, true),
+  view_channel: new Perms("view_channel", "View Channels", 1024, false, true),
   manage_events: new Perms("manage_events", "Manage Events", 8589934592),
+  create_events: new Perms("create_events", "Create Events", 17592186044416),
   moderate_members: new Perms("moderate_members", "Moderate Members", 1099511627776),
+  view_guild_insights: new Perms("view_guild_insights", "View Server Insights", 524288),
+  view_guild_subs_insights: new Perms("view_guild_subs_insights", "View Server Subscription Insights", 2199023255552),
   // Text
   send_messages: new Perms("send_messages", "Send Messages", 2048, false, true),
   use_public_threads: new Perms("use_public_threads", "Create Public Threads", 34359738368, false, true),
@@ -97,19 +55,24 @@ const Permissions = {
   mention_everyone: new Perms("mention_everyone", "Mention Everyone", 131072),
   external_emojis: new Perms("external_emojis", "Use External Emojis", 262144, false, true),
   external_stickers: new Perms("external_stickers", "Use External Stickers", 137438953472),
-  use_slash_commands: new Perms("use_slash_commands", "Use Application Commands", 2147483648, false, true),
+  use_slash_commands: new Perms("use_slash_commands", "Use Slash Commands", 2147483648, false, true),
+  use_embedded_activities: new Perms("use_embedded_activities", "Use Embeddeed Activities", 549755813888, false, true),
+  use_external_apps: new Perms("use_external_apps", "Use External Apps", 1125899906842624, false, true),
+  create_polls: new Perms("create_polls", "Create Polls", 562949953421312, false, true),
   add_reactions: new Perms("add_reactions", "Add Reactions", 64),
   // Voice
   connect_voice: new Perms("connect_voice", "Connect", 1048576),
   speak_voice: new Perms("speak_voice", "Speak", 2097152),
-  // stream_voice: new Perms("stream_voice", "Video", 512),
+  stream_video: new Perms("stream_video", "Video", 512),
   mute_members: new Perms("mute_members", "Mute Members", 4194304),
   deafen_members: new Perms("deafen_members", "Deafen Members", 8388608),
   move_members: new Perms("move_members", "Move Members", 16777216),
   use_voice_activity: new Perms("use_voice_activity", "Use Voice Activity", 33554432),
-  // start_activities: new Perms("start_activities", "Start Activities", 549755813888),
+  start_activities: new Perms("start_activities", "Start Activities", 549755813888),
   priority_speaker: new Perms("priority_speaker", "Priority Speaker", 256),
-  // stage_request_speak: new Perms("stage_request_speak", "Stage Request to Speak", 4294967296),
+  stage_request_speak: new Perms("stage_request_speak", "Request to Speak", 4294967296),
+  use_soundboard: new Perms("use_soundboard", "Use Soundboard", 4398046511104),
+  use_external_sounds: new Perms("use_external_sounds", "Use External Sounds", 35184372088832),
 }
 
 interface Feature {
@@ -384,7 +347,6 @@ interface KeyToggleProps {
 const GeneralPerms = [
   Permissions.administrator,
   Permissions.view_audit_log,
-  // Permissions.view_guild_insights,
   Permissions.manage_guild,
   Permissions.manage_role,
   Permissions.manage_channels,
@@ -393,12 +355,16 @@ const GeneralPerms = [
   Permissions.create_invites,
   Permissions.change_nickname,
   Permissions.manage_nickname,
-  Permissions.manage_emoji_stickers,
+  Permissions.manage_expressions,
+  Permissions.create_expressions,
   Permissions.manage_webhook,
   Permissions.view_channel,
   Permissions.manage_events,
+  Permissions.create_events,
   Permissions.moderate_members,
-]
+  Permissions.view_guild_insights,
+  Permissions.view_guild_subs_insights,
+];
 const TextPerms = [
   Permissions.send_messages,
   Permissions.use_public_threads,
@@ -415,16 +381,22 @@ const TextPerms = [
   Permissions.external_stickers,
   Permissions.add_reactions,
   Permissions.use_slash_commands,
-]
+  Permissions.use_embedded_activities,
+  Permissions.use_external_apps,
+  Permissions.create_polls,
+];
 const VoicePerms = [
   Permissions.connect_voice,
   Permissions.speak_voice,
-  // Permissions.stream_voice,
+  Permissions.stream_video,
   Permissions.mute_members,
   Permissions.deafen_members,
   Permissions.move_members,
   Permissions.use_voice_activity,
-  Permissions.priority_speaker
+  Permissions.priority_speaker,
+  Permissions.stage_request_speak,
+  Permissions.use_soundboard,
+  Permissions.use_external_sounds,
 ];
 
 // @ts-ignore
@@ -591,12 +563,12 @@ const inviteLink = computed(() => {
   }
 
   const clientId = "558256913926848537";
-  const scopes = `bot${inviteState.app_commands ? "%20applications.commands" : ""}`;
+  const scopes = `bot${inviteState.app_commands ? "+applications.commands" : ""}`;
   if (inviteState.administrator) {
     perms = Permissions.administrator.value;
   }
 
-  return `https://discord.com/api/oauth2/authorize?client_id=${clientId}&permissions=${perms}&scope=${scopes}`;
+  return `https://discord.com/api/oauth2/authorize?client_id=${clientId}&permissions=${perms}&integration_type=0&scope=${scopes}`;
 })
 </script>
 
@@ -610,7 +582,7 @@ const inviteLink = computed(() => {
           </InviteToggle>
         </div>
         <div class="flex-invite-content" :style='{ alignItems: "center" }'>
-          <div className="flex-invite" :style='{ margin: "0rem" }'>
+          <div className="flex-invite gap-invite" :style='{ margin: "0rem" }'>
             <div class="flex-invite-content">
               <h2 class="head-text">General Permissions</h2>
               <InviteToggle v-for="perm in GeneralPerms" :pid="perm.id" :invite="inviteState[perm.id]" @perms="togglePerms" :strict="perm.strict" :oauth="perm.oauth" :globalToggle="inviteState.administrator">
@@ -660,6 +632,10 @@ const inviteLink = computed(() => {
   font-weight: 600;
   margin: 0;
   margin-bottom: 0.5rem;
+}
+
+.gap-invite {
+  gap: 1rem;
 }
 
 .color-auth-click {
