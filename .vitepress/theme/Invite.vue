@@ -582,7 +582,7 @@ const inviteLink = computed(() => {
           </InviteToggle>
         </div>
         <div class="flex-invite-content" :style='{ alignItems: "center" }'>
-          <div className="flex-invite gap-invite" :style='{ margin: "0rem" }'>
+          <div class="flex-invite gap-invite" :style='{ margin: "0rem" }'>
             <div class="flex-invite-content">
               <h2 class="head-text">General Permissions</h2>
               <InviteToggle v-for="perm in GeneralPerms" :pid="perm.id" :invite="inviteState[perm.id]" @perms="togglePerms" :strict="perm.strict" :oauth="perm.oauth" :globalToggle="inviteState.administrator">
@@ -603,7 +603,7 @@ const inviteLink = computed(() => {
             </div>
           </div>
           <div class="flex-invite into-columnist">
-            <p>Jika ada <span className="color-oauth color-auth-click">warna ini</span>...</p>
+            <p>Jika ada <span class="color-oauth color-auth-click">warna ini</span>...</p>
             <p>Anda harus mengaktifkan 2FA (Two-Factor Authentication) di akun anda.</p>
           </div>
           <div class="flex-invite into-columnist">

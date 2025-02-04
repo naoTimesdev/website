@@ -12,10 +12,10 @@
             <p>Mohon kontak Fansub anda untuk mengubah link proyek Fansub ke URL yang benar.</p>
         </div>
         <div class="flex flex-col items-center mt-8">
-            <a href="/docs" className="link">
+            <a href="/docs" class="link">
                 Tertarik dengan naoTimes?
             </a>
-            <a href="/invite" className="link mt-2">
+            <a href="/invite" class="link mt-2">
                 Invite naoTimes
             </a>
         </div>
