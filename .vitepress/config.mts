@@ -225,7 +225,7 @@ export default defineConfig({
           },
           {
             text: 'Status',
-            link: 'https://status.n4o.xyz/status/naotimes',
+            link: 'https://status.n4o.xyz',
             rel: 'noopener noreferrer',
             target: '_blank',
           }
